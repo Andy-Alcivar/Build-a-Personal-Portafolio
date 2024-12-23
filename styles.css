@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: lato;
+}
+body {
+    font-family: sans-serif;
+}
+
+/* VARIABLES */
+:root{
+    --background_color: #1b1818;
+    --background_color-light: #f30719;
+    --detallesContraste: #f30719;
+    --detallesContraste-light: #1b1818;
+}
+
+/* HEADER */
+.header-nav{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--background_color-light);
+    padding: 10px;
+    
+}
+.header-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+.header-nav a:hover {
+    background-color: var(--detallesContraste-light);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* MAIN */
+.main {
+    width: 100%;
+   background-image: url(https://png.pngtree.com/background/20230416/original/pngtree-website-dark-technology-line-background-picture-image_2443557.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ESTILO DE SEPARADORES */
+.divTitleEtiqueta {
+    align-self: flex-start;
+    font-family: "Source Code Pro", monospace;
+    width: 100%;
+    font-size: 1.4em;
+    text-wrap: nowrap; 
+    /* SACAR ESTO DESP O CONFIGURAR BIEN */
+}
+.titleEtiqueta{
+    text-align: center;
+}
+.etiquetaColor{
+    color: var(--detallesContraste-light);
+}
+.atributoColor {
+    color: var(--detallesContraste);
+}
+
+/* ESTILO DE SECCIONES*/
+#welcome-section {
+    padding-top: 100px;
+    height: 100%;
+}
+.portfolio-section {
+    height: auto;
+    width: 75%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+.portfolio-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: box-shadow 0.2s ease;
+}
+.portfolio-article:hover{
+    box-shadow: 0 0 20px 5px var(--detallesContraste);
+}
+
+/* SECCION DE PRESENTACIÓN */
+.welcomeInfoFlexRow {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.welcomeInfo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 5vw; /* 30px*/
+    padding: 20px 0 20px 5vw;
+}
+.welcomeInfoImagen {
+    width: 20vw; /* 15em*/
+    height: 20vw; /* 15em*/
+    max-width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--detallesContraste-light);
+    transition: box-shadow 0.2s ease;
+}
+.welcomeInfoImagen:hover{
+    box-shadow: 0 0 20px 5px var(--detallesContraste);
+}
+.welcomeInfoImagen-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+}
+.welcomeArticle-sectionInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.welcomeArticle-sectionInfo-h1 {
+    font-size: 2.5vw; /* 2em*/
+    text-align: center;
+}
+.welcomeArticle-sectionInfo-h2 {
+    font-size: 2vw; /* 1.5em*/
+}
+.welcomeArticle-sectionInfo-p {
+    font-size: 1.5vw; /* 1em*/
+}
+.welcomeArticle-sectionInfo-botones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.welcomeArticle-sectionInfo-botones-a{
+    display: inline-flex;
+    
+}
+.welcomeArticle-sectionInfo-botones-icono {
+    filter: invert(100%);
+    width: 3.5vw; /* 3em*/
+    height: 4vw; /* 3.5em*/
+}
+svg defs {
+    filter: url(#red-filter);
+}
+.welcomeArticle-sectionInfo-botones-a:hover{
+    filter: url(#red-filter);
+}
+.welcomeArticle-sectionllaves {
+    min-height: 100%;
+    width: auto;
+    margin: auto 0;
+}
+.welcomeArticle-sectionllaves-p {
+    font-size: 12vw; /* 10em*/
+    color: var(--detallesContraste);
+    display: inline-block;
+}
+
+/* SECCION PROYECTOS */
+/* #projects-article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 100px;
+} */
+.projectFlex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    width: 100%;
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    border-left: 4px solid var(--detallesContraste);
+}
+.projects-image{
+    width: 32em; /* 15em*/
+    height: auto;
+    max-width: 100%;
+    /* margin: 0 auto; */
+}
+.projects-image-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+}
+.projects-description{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    width: 100%;
+}
+.project-tile {
+    text-wrap: pretty; /* OJO CON ESTOOOOOOO */
+}
+.projects-description-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    width: 80%;
+}
+.projects-description-iconos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+}
+.projects-description-iconos-a{
+    display: inline-block;
+}
+.projects-description-iconos-icono {
+    filter: invert(100%);
+    width: 2em; /* 3em*/
+    height: 2.5em; /* 3.5em*/
+}
+.projects-description-iconos-a:hover{
+    filter: url(#red-filter);
+}
+.projects-description-tags {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    width: 4em;
+    height: auto;
+    font-weight: bold; 
+}
+.projects-description-tag-html {
+    background-color: #f30719; 
+    color: #fff;
+    padding: 5px;
+}
+.projects-description-tag-css {
+    background-color: #2d54e5; 
+    color: #fff;
+    padding: 5px;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1000px) {
+    .portfolio-section {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 830px) {
+    .main{
+        padding-top: 60px;
+    }
+    .welcomeArticle-sectionInfo {
+        row-gap: 20px;
+    }
+    .divTitleEtiqueta {
+        font-size: 1em;
+    }
+    .welcomeInfoImagen {
+        width: 15em; /* 15em*/
+        height: 15em; /* 15em*/
+    }
+    .welcomeArticle-sectionInfo-h1 {
+        font-size: 2em; /* 2em*/
+    }
+    .welcomeArticle-sectionInfo-h2 {
+        font-size: 1.5em; /* 1.5em*/
+    }
+    .welcomeArticle-sectionInfo-p {
+        font-size: 1em; /* 1em*/
+    }
+    .welcomeArticle-sectionInfo-botones-icono {
+        width: 3em; /* 3em*/
+        height: 3.5em; /* 3.5em*/
+    }
+    .welcomeArticle-sectionllaves-p {
+        font-size: 8em; /* 10em*/
+    }
+    .project-tile {
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width: 615px) {
+    .main{
+        padding-top: 0px;
+    }
+    .divTitleEtiqueta {
+        font-size: 0.5em;
+    }
+    .welcomeInfoImagen {
+        width: 12.5em; /* 15em*/
+        height: 12.5em; /* 15em*/
+    }
+    .welcomeArticle-sectionInfo-h1 {
+        font-size: 1.5em; /* 2em*/
+    }
+    .welcomeArticle-sectionInfo-h2 {
+        font-size: 1em; /* 1.5em*/
+    }
+    .welcomeArticle-sectionInfo-p {
+        font-size: 0.7em; /* 1em*/
+    }
+    .welcomeArticle-sectionInfo-botones-icono {
+        width: 2.5em; /* 3em*/
+        height: 3em; /* 3.5em*/
+    }
+    .welcomeArticle-sectionllaves-p {
+        font-size: 6em; /* 10em*/
+    }
+
+    /* SEGUNDA SECCIÓN */
+    .projectFlex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .project {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        
+    }
+}
+@media screen and (max-width: 400px) {
+    .portfolio-section {
+        width: 95%;
+    }
+    .divTitleEtiqueta {
+        font-size: 0.5em;
+    }
+    .welcomeInfoImagen {
+        width: 12.5em; /* 15em*/
+        height: 12.5em; /* 15em*/
+    }
+    .welcomeArticle-sectionInfo-h1 {
+        font-size: 1.5em; /* 2em*/
+    }
+    .welcomeArticle-sectionInfo-h2 {
+        font-size: 1em; /* 1.5em*/
+    }
+    .welcomeArticle-sectionInfo-p {
+        font-size: 0.7em; /* 1em*/
+    }
+    .welcomeArticle-sectionInfo-botones-icono {
+        width: 2.5em; /* 3em*/
+        height: 3em; /* 3.5em*/
+    }
+
+.welcomeArticle-sectionllaves-p {
+        font-size: 6em; /* 10em*/
+    }
+}
