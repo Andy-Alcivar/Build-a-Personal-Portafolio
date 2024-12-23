@@ -78,7 +78,7 @@ body {
 }
 .portfolio-section {
     height: auto;
-    width: 75%;
+    width: 90%;
     color: #fff;
     display: flex;
     align-items: center;
@@ -279,7 +279,7 @@ svg defs {
 }
 @media screen and (max-width: 830px) {
     .main{
-        padding-top: 60px;
+        padding-top: 10px;
     }
     .welcomeArticle-sectionInfo {
         row-gap: 20px;
